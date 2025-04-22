@@ -13,4 +13,5 @@ This is intro project
 ** push/sync
 ** repeat
 * when feature complete: raise and merge PR
+* switch to main and pull/sync
 * repeat
