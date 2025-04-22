@@ -1,7 +1,6 @@
 # Unity-Intro-Project
 This is intro project
 
-
 ## git
 * Always on main: create branch(feature/branchname)
 * switch to new branch
