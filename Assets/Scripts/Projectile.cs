@@ -4,14 +4,14 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
     [SerializeField] private float duration = 5f;
+
+    private Rigidbody rb;
     void Start()
     {
         Invoke("DestroySelf", duration);
-    }
 
-    private void FixedUpdate()
-    {
-        transform.Translate(speed * Time.deltaTime * Vector3.forward);
+        rb = GetComponent<Rigidbody>();
+        rb.linearVelocity = transform.forward * speed;
     }
 
     private void DestroySelf()
@@ -26,5 +26,13 @@ public class Projectile : MonoBehaviour
     public void SetDuration (float duration)
     {
         this.duration = duration;
+    }
+
+    private void OnCollisionEnter(Collision other) 
+    {
+        if(other.gameObject.CompareTag("Ground"))
+            {
+                Destroy(gameObject);
+            }
     }
 }
