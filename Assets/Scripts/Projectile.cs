@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Projectile : MonoBehaviour
 {
@@ -28,11 +29,11 @@ public class Projectile : MonoBehaviour
         this.duration = duration;
     }
 
-    private void OnCollisionEnter(Collision other) 
+    private void OnCollisionEnter(Collision collision) 
     {
-        if(other.gameObject.CompareTag("Ground"))
-            {
-                Destroy(gameObject);
-            }
+        if (collision.collider.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
