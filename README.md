@@ -1,6 +1,7 @@
 # Unity-Intro-Project
 
 Project from a game dev course
+
 Learned: The basics of Unity like physics, objects, materials, prefabs, coding and how to build the game.
 
 ## git
